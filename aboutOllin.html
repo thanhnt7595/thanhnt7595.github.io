@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AboutOllin</title>
+	<!-- Latest compiled and minified CSS & JS -->
+
+	<!-- Local bootstrap CSS & JS -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="css/font-awesome.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".thanhmenu .dropdown").hover(function() {
+				$(this).addClass('open');
+			}, function() {
+				$(this).removeClass('open');
+			});
+			$("#close").click(function() {
+				$("#fullmenu").removeClass('show');
+			});
+			$("#menu").click(function() {
+				$("#fullmenu").addClass('show');
+			});
+			$("#search").click(function(event) {
+				$("#right .form-group").toggleClass('show');
+				$("#right .form-group input").focus();
+				$("#left button.btn.btn-primary").toggleClass('show');
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="fullmenu">
+		<ul class="list-group">
+			<li class="list-group-item"><a href="">Home</a></li>
+			<li class="list-group-item">
+				<a data-toggle="collapse" data-target="#product" href="javascript:void(0)">Products<b class="caret"></b></a>
+				<ul id="product" class="list-group collapse">
+					<li class="list-group-item">Tube</li>
+					<li class="list-group-item">Oral</li>
+					<li class="list-group-item">Paediatric</li>
+					<li class="list-group-item">Paediatric</li>
+					<li class="list-group-item">Paediatric</li>
+				</ul>
+			</li>
+			<li class="list-group-item"><a href="">About Ollin</a></li>
+			<li class="list-group-item"><a href="">About Ollin</a></li>
+			<li class="list-group-item"><a href="">About Ollin</a></li>
+		</ul>
+		<div id="close">
+			<i class="fa fa-close"></i>
+		</div>
+	</div>
+	<header>
+		<div class="header">
+			<div class="container">
+				<nav class="navbar navbar-default hidden-lg hidden-md" role="navigation">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar">
+							<button id="menu" class="btn btn-default xsbtn" ><i class="fa fa-bars"></i></button>
+							<div class="dropdown lang xsbtn xsimg" >
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="imgs/images/vietnam.png"> <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><img src="imgs/images/vietnam.png"></a></li>
+									<li><a href="#"><img src="imgs/images/english.png"></a></li>
+								</ul>
+							</div>
+							<button id="search" class="btn btn-default xsbtn"><i class="fa fa-search"></i></button>
+							<a class="navbar-brand" href="#"><img src="imgs/images/logo.png" width="100px" class="img-responsive" alt="Image"></a>
+						</div>
+					</div>
+
+				</nav>
+
+				<nav class="navbar navbar-default hidden-sm hidden-xs" role="navigation">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand logo" href="#"><img src="imgs/images/logo.png" class="img-responsive" alt="Image"></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="top-header">
+						
+						<form class="navbar-form navbar-left navdown" role="search">
+							<div class="form-group">
+								<div class="input-group">
+									<input name="key" type="text" class="form-control" placeholder="Search">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+									</span>
+								</div>
+							</div>
+							<button type="submit" class="btn btn_contact">CONTACT</button>
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Văn phòng Hà Nội: 1900 636930</a></li>
+							<li class="dropdown lang">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="imgs/images/vietnam.png"> <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><img src="imgs/images/vietnam.png"></a></li>
+									<li><a href="#"><img src="imgs/images/english.png"></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</nav>
+			</div>
+			<form action="" method="GET" role="form">
+				<div class="xsmenu hidden-md hidden-lg">
+					<div id="right">
+						<div class="form-group">
+							<input type="text" name="key" class="form-control" id="">
+						</div>
+						Văn phòng Hà Nội: 1900 636930
+					</div>
+					<div id="left">
+						<button type="submit" class="btn btn-primary">SEARCH</button>
+						Contact
+					</div>
+				</form>
+			</div>
+		</div>
+	</header>
+	<div class="thanhnav hidden-xs hidden-sm">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav thanhmenu" id="myMenu">
+						<li><a href="#">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<!-- <b class="caret"></b> --></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Tube</a></li>
+								<li><a href="#">Oral</a></li>
+								<li><a href="#">Paediatric</a></li>
+								<li><a href="#">Paediatric</a></li>
+								<li><a href="#">Paediatric</a></li>
+							</ul>
+						</li>
+						<li><a href="#">About Ollin</a></li>
+						<li><a href="#">About Ollin</a></li>
+						<li><a href="#">About Ollin</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>
+		</nav>
+	</div>
+
+		<div class="content_AboutOllin">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-xs-12">
+						<div class="content--left">
+							<div class="left--nav">
+								<ul>
+									<li><a class="active" href="#home">About Ollin</a></li>
+									<li><a href="#news">Partnerships</a></li>
+									<li><a href="#contact">Corporate Social Responsibility</a></li>
+									<li><a href="#about">Sustainable Development</a></li><li><a href="#news">News</a></li>
+									<li><a href="#contact">Blog</a></li>
+									<li><a href="#about">Careers</a></li>
+									<li><a href="#contact">News</a></li>
+									<li><a href="#about">Links</a></li>
+								</ul>
+							</div>
+							<div class="left--text">
+								<h1><a href="#">Last news</a></h1>
+								<h3><a href="#">About Ollin</a></h3>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio unde eveniet nesciunt asperiores quisquam, ullam quibusdam distinctio, quis, cum deserunt dolore? Voluptatibus assumenda consectetur magnam quod, eligendi excepturi voluptatum quibusdam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio unde eveniet nesciunt asperiores quisquam.
+								</span>
+
+								<!-- <div class="left--text--news">
+									<ul>
+										<li><a href="#">Lorem ipsum dolor sit ametetur?</a></li>
+										<li><p>May 15,2017-09:00AM</p></li>
+										<li><span>Reason for change This is an ISO regul;ation 18250-3 brought about by the World Health Organisation (WHO)...</span></li>
+									</ul>
+									<ul>
+										<li><a href="#">Lorem ipsum dolor sit ametetur?</a></li>
+										<li><p>May 15,2017-09:00AM</p></li>
+										<li><span>Please use the links below to view or download the speaker presentations. Jenny Livingstone, Specalist PGHaN Dietitian...</span></li>
+									</ul>
+									<ul>
+										<li><a href="#">Lorem ipsum dolor sit ametetur?</a></li>
+										<li><p>May 15,2017-09:00AM</p></li>
+										<li><span>Patients requiring enteral tube feeding are not made to a single formula. The Nutrison range of high...</span></li>
+									</ul>
+								
+								</div> -->
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-9 col-sm-9 col-xs-12">
+						<div class="content--right">
+							<div class="right--text">
+								<h3><a href="#">About Ollin</a></h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem odio, sunt maiores et, ullam assumenda repudiandae eius sequi doloremque sapiente optio veniam. Laudantium vitae voluptatibus, consequatur vel cumque, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+								</p><br>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem odio, sunt maiores et, ullam assumenda repudiandae eius sequi doloremque sapiente optio veniam. Laudantium vitae voluptatibus, consequatur vel cumque, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+								</p><br>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem odio, sunt maiores et, ullam assumenda repudiandae eius sequi doloremque sapiente optio veniam. Laudantium vitae voluptatibus, consequatur vel cumque, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+								</p><br>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem odio, sunt maiores et, ullam assumenda repudiandae eius sequi doloremque sapiente optio veniam. Laudantium vitae voluptatibus, consequatur vel cumque, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+								</p><br>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem odio, sunt maiores et, ullam assumenda repudiandae eius sequi doloremque sapiente optio veniam. Laudantium vitae voluptatibus, consequatur vel cumque, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+								</p><br>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem odio, sunt maiores et, ullam assumenda repudiandae eius sequi doloremque sapiente optio veniam. Laudantium vitae voluptatibus, consequatur vel cumque, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+								</p><br>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet rem odio, sunt maiores et, ullam assumenda repudiandae eius sequi doloremque sapiente optio veniam. Laudantium vitae voluptatibus, consequatur vel cumque, velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+								</p><br>
+
+								<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui nobis, quis non odio tempore fugiat distinctio dolore quibusdam. Possimus error quod consequuntur. Assumenda voluptatibus tempora explicabo pariatur tenetur reiciendis, laudantium!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui nobis, quis non odio tempore fugiat distinctio dolore quibusdam. Possimus error quod consequuntur. Assumenda voluptatibus tempora explicabo pariatur tenetur reiciendis, laudantium!</p>
+								<h3>The Power of Ollin</h3>
+								<p>We believe in the power of nutrition to make a positive and proven difference to health. Our ambition is for medical nutrition to be integral to healthcare.</p>
+								<img src="imgs/images/product.png" alt="">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dolore!</p>
+								<h3>Our areas of expertise</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<h3>Focus areas</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus eligendi nisi distinctio, sapiente sint asperiores, maxime doloribus reiciendis obcaecati alias sit deserunt, eum non magni, eveniet ea cupiditate quo praesentium!</p>
+								<p>Eaque quas itaque vero, corporis repellendus tempore quod excepturi iste nam quia qui voluptatibus commodi sed beatae nobis! Tenetur quod delectus, at quis in est culpa dolores, repellat magni necessitatibus!</p>
+								<ul>
+									<li>Lorem ipsum dolor sit amet.</li>
+									<li>Cum, ducimus quia autem dolore.</li>
+									<li>Amet quod at impedit, est!</li>
+									<li>Dolorum dolorem eum cum sequi?</li>
+									<li>Temporibus cum ratione corrupti tempora!</li>
+									<li>Nemo enim harum, sed nam.</li>
+								</ul>
+								<h3>Our areas of expertise</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<h3>Our areas of expertise</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<h3>Our areas of expertise</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<h3>Our areas of expertise</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi reprehenderit sit est. Consequatur iste ipsum quibusdam assumenda doloribus! Doloremque, consequatur! Quod facilis minima totam blanditiis iure ab consectetur laborum est!</p>
+								<button type="button" class="btn">VIEW OUR CURRENT VACACIES</button>
+								<div class="employ--text">
+									<div class="col-md-8">
+										<div class="emp--text--item">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="emp--item--left">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit a aliquid eaque vel!</p>
+														<p><a href="#">MORE DETAIL ></a></p>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<img src="imgs/images/efc.jpg" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bottom--text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vero tempore hic eveniet perspiciatis deleniti tempora odit tenetur explicabo error a, earum. Veritatis consequatur at quia eos sit blanditiis quas.</p>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="footer--item1">
+					<ul>
+						<li><a href="#"><p>Thông tin</p></a></li>
+						<li>Hà Nội</li>
+						<li>Số 86 - 88 Nguyễn Lương Bằng, Đống Đa,</li>
+						<li>Đà Nẵng</li>
+						<li>Số 01 Bế Văn Đàn, Đà Nẵng</li>
+						<li>Hồ Chí Minh</li>
+						<li>30/7 Ngô Thời Nhiệm, Phường 7, Q.3, HCM</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="footer--item2">
+					<div class="row">
+						<div class="col-md-6">
+							<ul>
+								<li><a href="#"><p>Hỗ trợ</p></a></li>
+								<li><a href="#">Tìm kiếm</a></li>
+								<li><a href="#">Giới thiệu</a></li>
+							</ul>
+
+						</div>
+						<div class="col-md-6">
+							<ul>
+								<li><a href="#"><p>Dịch vụ</p></a></li>
+								<li><a href="#">Trang chủ</a></li>
+								<li><a href="#">Sản phẩm</a></li>
+								<li><a href="#">Giới thiệu</a></li>
+								<li><a href="#">Liên hệ</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="footer--item3">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="item--img">
+								<img src="imgs/images/footer.png" alt="" style="max-width: 100%; height: 350px;">
+							</div>
+
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+							<div class="item--text">
+								<ul>
+									<li><a href="#"><p>HOTLINE</p></a></li>
+									<li><a href="#">1900.636.930</a></li>
+									<li>Thứ 2 - Thứ 7</li>
+									<li>Ngày làm việc: từ thứ 2 - thứ 7</li>
+									<li>Giờ làm việc: 7h30 - 17h30</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+
+</body>
+</html>
